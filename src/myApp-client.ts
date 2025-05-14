@@ -1,6 +1,8 @@
 import { ConnectorError, StdTestConnectionOutput } from "@sailpoint/connector-sdk"
 import { Config } from "./model/config";
 import { User } from "./model/user";
+import { HTTP } from "./http/http";
+import { HTTPFactory } from "./http/http-factory";
 
 
 /**
