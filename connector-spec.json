@@ -1,5 +1,5 @@
 {
-	"name": "demo-custom-saas",
+	"name": "myapp-custom-saas",
 	"commands": [
 		"std:account:list",
 		"std:account:read",
