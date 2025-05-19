@@ -32,8 +32,8 @@ export const connector = async () => {
 
             for (const account of accounts) {
                 res.send({
-                    identity: account.id,
-                    uuid: account.id,
+                    identity: account.id ? account.id.toString() : '',
+                    uuid: account.id ? account.id.toString() : '',
                     attributes: {
                         firstName: account.firstName,
                         lastName: account.lastName,

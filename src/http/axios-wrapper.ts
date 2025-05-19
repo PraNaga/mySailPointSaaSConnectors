@@ -9,7 +9,7 @@ export class AxiosWrapper implements HTTP {
         this.httpClient = axios.create({
             baseURL: config.baseUrl,
             headers: {
-                'Api-Key': config.apiKey ? config.apiKey : ''
+                'x-api-key': config.apiKey ? config.apiKey : ''
             }
         })
 

@@ -32,7 +32,7 @@ export class MyAppClient {
 	
 	//Test Connection
 	async testConnection(): Promise<StdTestConnectionOutput> {
-        const accountsList = await this.httpClient.get<User[]>('/users')
+		const accountsList = await this.httpClient.get<User[]>('/api/users')
         if (accountsList.status !== 200) {
             throw new ConnectorError("Unable to connect to MyApp")
         }
@@ -41,7 +41,7 @@ export class MyAppClient {
 	
 	//Account Aggregation
 	async getAccounts(): Promise<User[]> {
-		const response = await this.httpClient.get('/users');
+		const response = await this.httpClient.get('/api/users');
 		const accounts: User[] = response.data.data.map((user: any) => ({
 			id: user.id,
 			firstName: user.first_name,
